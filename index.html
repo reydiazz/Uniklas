@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniklas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        Uniklas
+    </header>
+    <main class="contenedor">
+        <!-- Carrusel de imágenes -->
+        <div class="carrusel-imagenes">
+            <figure>
+                <img src="img/1.jpg" alt="Imagen 1">
+            </figure>
+            <figure>
+                <img src="img/2.jpg" alt="Imagen 2">
+            </figure>
+            <figure>
+                <img src="img/3.jpg" alt="Imagen 3">
+            </figure>
+        </div>
+
+        <!-- Seccion de Informacion -->
+        <section class="acerca-de">
+            <h2>Acerca de nosotros</h2>
+            <article class="historia">
+                <h3>Nuestra historia</h3>
+                <p>Somos UNIKLAS una empresa, con más de 15 años de experiencia y especializados en la fabricación
+                    de zócalos de madera, MDF y Tapajuntas para pisos laminados, madera, estructurados y entre
+                    otros.
+                </p>
+            </article>
+            <article class="mision">
+                <h3>Nuestra misión</h3>
+                <p>Brindar a nuestros clientes un servicio de calidad, con productos innovadores y de alta
+                    durabilidad.</p>
+            </article>
+            <article class="vision">
+                <h3>Nuestra visión</h3>
+                <p>Ser la empresa líder en la fabricación de zócalos y tapajuntas a nivel nacional, con un
+                    crecimiento constante y un compromiso con el medio ambiente.</p>
+            </article>
+            <article class="valores">
+                <h3>Nuestros valores</h3>
+                <ul>
+                    <li>Valor 1</li>
+                    <li>Valor 2</li>
+                    <li>Valor 3</li>
+                </ul>
+            </article>
+        </section>
+        <!-- Seccion de Productos -->
+        <section class="productos">
+            <h2>Nuestros productos</h2>
+            <article class="producto">
+                <img src="img/zocalos.jpg" alt="imagen 1">
+                <h3>Zócalos</h3>
+                <p>Descripción del producto 1</p>
+            </article>
+            <article class="producto">
+                <img src="img/espumas.jpg" alt="imagen 2">
+                <h3>Espumas niveladoras</h3>
+                <p>Descripción del producto 2</p>
+            </article>
+            <article class="producto">
+                <img src="img/cornisas.jpg" alt="imagen 3">
+                <h3>Cornisas para el techo</h3>
+                <p>Descripción del producto 3</p>
+            </article>
+            <article class="producto">
+                <img src="img/molduras.jpg" alt="imagen 4">
+                <h3>Molduras para pared</h3>
+                <p>Descripción del producto 4</p>
+            </article>
+        </section>
+        <!-- Seccion de Contacto -->
+        <section class="contacto">
+            <div class="info-contacto">
+                <h2>Contacto</h2>
+                <ul>
+                    <li>Teléfono: (01) 5700 923 / 934 232 698 / 947 332 715</li>
+                    <li>Correo: ventas@Uniklas.pe</li>
+                    <li>Local: Calle María Reiche 189 Santiago de Surco. Centro comercial Venturo Int 218 -Piso 2.
+                    </li>
+                </ul>
+                <!-- Logos de Redes Sociales -->
+                <h2>Síguenos en nuestras redes sociales</h2>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/UniklasPeru" target="_blank"><img src="img/facebook.png"
+                            alt="Zócalos y accesorios Uniklas"></a>
+                    <a href="https://www.instagram.com/UniklasPeru" target="_blank"><img src="img/instagram.png"
+                            alt="ZOCALOSUNIKLAS"></a>
+                </div>
+            </div>
+            <!-- Formulario de contacto -->
+            <form class="formulario" action="enviar.php" method="post">
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+                    <p>Si tiene alguna pregunta sobre nosotros, contáctenos directamente y complete nuestro breve
+                        formulario de comentarios.</p>
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                    <div class="campo">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    <div class="boton">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- Mapa -->
+            <div class="mapa">
+                <h2>Nuestra ubicación</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.327545864187!2d-76.9963274!3d-12.1209222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9005769c657%3A0x23f4f42364eae2a1!2sUNIKLAS!5e1!3m2!1ses!2spe!4v1747102141898!5m2!1ses!2spe"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Uniklas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
