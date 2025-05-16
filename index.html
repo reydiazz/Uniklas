@@ -9,10 +9,39 @@
 </head>
 
 <body>
-    <header>
-        Uniklas
+    <header id="main-header">
+        <div class="top-bar">
+            <div class="container">
+                <span><i class="fa fa-phone"></i> +51 01 5700 923 / 934 232 698 / 947 332 715</span>
+                <span><i class="fa fa-envelope"></i> ventas@uniklas.pe</span>
+                <span class="social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Uniklas Perú">
+                </a>
+            </div>
+            <nav id="main-navigation">
+                <ul>
+                    <li><a href="#inicio" class="active">INICIO</a></li>
+                    <li><a href="#acerca-de">NOSOTROS</a></li>
+                    <li><a href="#productos">PRODUCTOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="call-to-action">
+                <a href="#" class="button">
+                    <i class="fa fa-whatsapp"></i> Consulta Gratis
+                </a>
+            </div>
+        </div>
     </header>
-    <main class="contenedor">
+    <main class="contenedor" id="inicio">
         <!-- Carrusel de imágenes -->
         <div class="carrusel-imagenes">
             <figure>
@@ -27,7 +56,7 @@
         </div>
 
         <!-- Seccion de Informacion -->
-        <section class="acerca-de">
+        <section class="acerca-de" id="acerca-de">
             <h2>Acerca de nosotros</h2>
             <article class="historia">
                 <h3>Nuestra historia</h3>
@@ -56,7 +85,7 @@
             </article>
         </section>
         <!-- Seccion de Productos -->
-        <section class="productos">
+        <section class="productos" id="productos">
             <h2>Nuestros productos</h2>
             <article class="producto">
                 <img src="img/zocalos.jpg" alt="imagen 1">
@@ -80,7 +109,7 @@
             </article>
         </section>
         <!-- Seccion de Contacto -->
-        <section class="contacto">
+        <section class="contacto" id="contacto">
             <div class="info-contacto">
                 <h2>Contacto</h2>
                 <ul>
