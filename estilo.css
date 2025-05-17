@@ -17,7 +17,11 @@ body {
     font-family: "Montserrat", sans-serif;
     line-height: 1.6;
 }
-
+/*Cambio de color cuando se selecciona texto*/
+::selection {
+    background: #a2c238;
+    color: #fff;
+}
 a {
     color: black;
     text-decoration: none;
@@ -33,7 +37,7 @@ a {
 }
 
 .header {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: white;
     padding: 20px 20px;
     display: flex;
@@ -52,23 +56,133 @@ a {
 
 .menu {
     display: flex;
-    gap: 20px;
+    gap: 20px;    
 }
 
 .menu a {
-    padding: 5px 30px;
+    padding: 1px 10px;
     color: black;
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px; /*Borde cambiado para que sea mas redondo, si no borrarlo*/
 }
 
 .menu a:hover {
     background-color: rgb(162, 194, 56);
     color: white;
     box-shadow: 0 0 0 0 rgb(162, 194, 56);
+    border-radius: 5px;     /*Borde cambiado para que sea mas redondo, si no borrarlo*/    
 }
-
+.contacto {
+    display: flex;
+    gap: 40px;
+    background-color: #f1f1f1;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 40px 0;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(71, 71, 70, 0.5);    
+}
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;    
+    gap: 20px;
+    background-color: #f1f1f1;
+    align-items: flex-end;
+    justify-content: center;   
+    align-items: left; 
+    margin: 40px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(71, 71, 70, 0.5);
+    flex: 1 1 0;
+}
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 0;
+}
+.info-contacto ul {
+    list-style: none;
+    padding: 0;
+}
+.formulario fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.campo textarea {
+    max-width: 100%;
+    min-height: 80px; /*Tamaño minimo del text area*/
+    max-height: 160px; /*Tamaño maximo del text area*/    
+    resize: vertical;    
+}
+.campo input,.campo textarea {
+    padding: 5px 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;    
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+/*Cambia el color del borde al enfocar*/
+.campo input:focus,.campo textarea:focus {
+    border-color: rgb(162, 194, 56);
+    outline: none;
+}
+.boton {
+    display: flex;
+    justify-content: flex-end;
+}
+.boton button {
+    background: #a2c238;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;      /* Más alto y más ancho del botón */
+    border-radius: 4px;
+    font-size: 1.2rem;       /* Letra más grande en el botón */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.boton button:hover {
+    background: #8a9f2b;
+    transform: scale(1.05); /* Aumenta el tamaño del botón cuando se pasa el mouse (opcional) */
+}
+/*Disposicion de los iconos y letra*/
+.redes-sociales {
+    display: flex;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+/*Cambio en formato de letra de las redes sociales*/
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+/*Disposicion de los iconos*/
+.redes-sociales img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.mapa iframe {        
+    min-width: 100%;
+    min-height: 300px; /*Tamaño minimo del mapa*/
+    max-width: 100%;    
+    border: 0;
+    display: block;
+    border-radius: 7px; /*Borde redondo para que convine con las cajas*/
+    box-sizing: border-box;
+}
 @media (max-width:768px) {
     .header {
         flex-direction: column;
@@ -85,5 +199,9 @@ a {
         display: block;
         width: 100%;
         text-align: center;
+    }
+
+    .mapa iframe {
+        height: 180px;
     }
 }
