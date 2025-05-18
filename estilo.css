@@ -74,6 +74,105 @@ a {
     box-shadow: 0 0 0 0 rgb(162, 194, 56);
     border-radius: 5px;     /*Borde cambiado para que sea mas redondo, si no borrarlo*/    
 }
+
+/*Estilo de la sección nosotros */
+
+.acerca-de >h2{
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    text-align:center; /* Centra el texto */
+    font-size: 36px; /* Cambia el tamaño de la fuente */
+    margin-bottom: 24px; /* Añade espacio debajo del título */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    color: #333;
+}
+
+.acerca-de-contenido {
+    background-color: #f1f1f1; /* Establece el color de fondo del contenedor */
+    display: flex; /* Cambia a flexbox para alinear los elementos */
+    gap: 65px; /* Define el espacio entre los elementos */
+    padding: 30px; /* Más espacio interno */
+    margin: 30px 0px; /* Más espacio externo arriba y abajo y a los lados */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: stretch;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(71, 71, 70, 0.5); /* Añade sombra al contenedor */
+    display: flex;
+    flex-flow: row wrap; /* Permite que los elementos se ajusten a la pantalla*/
+}
+
+.acerca-de-contenido >p{
+    width: 250px; /* Establece un ancho fijo para el párrafo */
+    margin: 0;
+    word-wrap: break-word; /* Rompe palabras largas si es necesario*/
+    white-space: normal;  /* Permite que el texto se divida en líneas */
+    overflow: hidden; /* Opcional, oculta desbordes si ocurren */
+    line-height: 1.6; /* Espaciado entre líneas */
+    font-size: 16px; /* Cambia el tamaño de la fuente */ 
+}
+
+.acerca-de-contenido >h3{
+    width: 250px; /* Establece un ancho fijo para el párrafo */
+}
+
+.acerca-de-contenido >article{
+    background-color: #fff; /* Color de fondo blanco */
+    padding: 20px; /* Añade espacio interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    width: 300px; /* Establece un ancho fijo para el artículo */
+    text-align: center;
+}
+
+.acerca-de-contenido article:hover {
+    transform: translateY(-5px); /* Eleva el artículo al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.historia{
+    text-align:center; /* Centra el texto */
+}
+
+.mision{
+    text-align:center; /* Centra el texto */
+}
+
+.vision{
+    text-align:center; /* Centra el texto */
+}
+
+.historia >h3, .mision >h3, .vision >h3{
+    color:#2c3e50; /* Cambia el color del texto */ 
+    text-transform: capitalize; /* Convierte el texto a mayúsculas */
+    font-size: 24px; /* Cambia el tamaño de la fuente */
+    font-weight: 700; /* Cambia el grosor de la fuente */
+}
+
+/* Fin de la sección nosotros*/
+
+.productos{
+    background-color: #f1f1f1; /* Color de fondo */
+    box-shadow: 1px 1px 5px rgba(71, 71, 70, 0.5); /* Sombra suave */
+}
+.h2productos{
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    text-align:center; /* Centra el texto */
+    font-size: 36px; /* Cambia el tamaño de la fuente */
+    margin-bottom: 24px; /* Añade espacio debajo del título */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    color: #333;
+}
+
+.productos >article{
+    background-color: #fff; /* Color de fondo blanco */
+    padding: 20px; /* Añade espacio interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    width: 300px; /* Establece un ancho fijo para el artículo */
+    text-align: center;
+}
+
 .contacto {
     display: flex;
     gap: 40px;
