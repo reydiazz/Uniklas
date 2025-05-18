@@ -13,23 +13,28 @@
 </head>
 
 <body>
-    <div class="contenedor">
+
+    <div class="contenedor" id="ubicacionInicio">
+
+        <!-- Barra de navegacion -->
         <header class="header">
             <div class="logo">
-                <a href="index.html">
+                <a href="#ubicacionInicio">
                     <img src="resources/logo.png" alt="UNIKLAS Perú">
                 </a>
             </div>
             <nav class="menu">
-                <a href="#inicio" class="active">Inicio</a>
-                <a href="#acerca-de">Nosotros</a>
-                <a href="#productos">Productos</a>
+                <a href="#ubicacionInicio" class="active">Inicio</a>
+                <a href="#ubicacionNosotros">Nosotros</a>
+                <a href="#ubicacionProductos">Productos</a>
                 <a href="#contacto">Contacto</a>
             </nav>
         </header>
 
-        <main class="contenedor-main" id="inicio">
-            <!-- Carrusel de imágenes -->
+        <!-- Cuerpo de la pagina -->
+        <main class="contenedor-main">
+
+            <!-- Carrusel de imagenes -->
             <div class="carrusel-imagenes">
                 <figure>
                     <img src="img/1.jpg" alt="Imagen 1">
@@ -42,49 +47,54 @@
                 </figure>
             </div>
 
-            <!-- Seccion de Informacion -->
-            <section class="acerca-de">
-            <h2>Acerca de nosotros</h2>
-            <div class = "acerca-de-contenido">
-            <article class="historia">
-                <h3>historia</h3>
-                <p>Somos UNIKLAS una empresa, con más de 15 años de experiencia y especializados en la fabricación
-                    de zócalos de madera, MDF y Tapajuntas para pisos laminados, madera, estructurados y entre
-                    otros.</p>
-            </article>
-            <article class="mision">
-                <h3>misión</h3>
-                <p>Brindar a nuestros clientes un servicio de calidad, con productos innovadores y de alta
-                    durabilidad.</p>
-            </article>
-            <article class="vision">
-                <h3>visión</h3>
-                <p>Ser la empresa líder en la fabricación de zócalos y tapajuntas a nivel nacional, con un
-                    crecimiento constante y un compromiso con el medio ambiente.</p>
-            </article>
-            </div>
-        </section>
-            <!-- Seccion de Productos -->
-            <h2 class = "h2productos">Nuestros productos</h2>
-            <section class="productos">
-                <article class="producto">
-                    <img src="img/zocalos.jpg" alt="imagen 1">
-                    <h3>Zócalos</h3>
-                    <p>Descripción del producto 1</p>
-                </article>
-                <article class="producto">
-                    <img src="img/cornisas.jpg" alt="imagen 3">
-                    <h3>Cornisas para el techo</h3>
-                    <p>Descripción del producto 3</p>
-                </article>
-                <article class="producto">
-                    <img src="img/molduras.jpg" alt="imagen 4">
-                    <h3>Molduras para pared</h3>
-                    <p>Descripción del producto 4</p>
-                </article>
+            <!-- Acerca de nosotros -->
+            <section class="acerca-de" id="ubicacionNosotros">
+                <h2>ACERCA DE NOSOTROS</h2>
+                <div class="acerca-de-contenido">
+                    <article class="historia">
+                        <h3>Historia</h3>
+                        <p>Somos UNIKLAS una empresa, con más de 15 años de experiencia y especializados en la
+                            fabricación
+                            de zócalos de madera, MDF y Tapajuntas para pisos laminados, madera, estructurados y entre
+                            otros.</p>
+                    </article>
+                    <article class="mision">
+                        <h3>Misión</h3>
+                        <p>Brindar a nuestros clientes un servicio de calidad, con productos innovadores y de alta
+                            durabilidad.</p>
+                    </article>
+                    <article class="vision">
+                        <h3>Visión</h3>
+                        <p>Ser la empresa líder en la fabricación de zócalos y tapajuntas a nivel nacional, con un
+                            crecimiento constante y un compromiso con el medio ambiente.</p>
+                    </article>
+                </div>
             </section>
+
+            <!-- Seccion de Productos -->
+            <section class="nuestros" id="ubicacionProductos">
+                <h2>NUESTROS PRODUCTOS</h2>
+                <div class="nuestros-productos">
+                    <article class="producto">
+                        <img src="img/zocalos.jpg" alt="imagen 1">
+                        <h3>ZÓCALOS</h3>
+                        <p>Descripción del producto 1</p>
+                    </article>
+                    <article class="producto">
+                        <img src="img/cornisas.jpg" alt="imagen 2">
+                        <h3>CORNISAS PARA EL TECHO</h3>
+                        <p>Descripción del producto 2</p>
+                    </article>
+                    <article class="producto">
+                        <img src="img/molduras.jpg" alt="imagen 3">
+                        <h3>MOLDURAS PARA PARED</h3>
+                        <p>Descripción del producto 3</p>
+                    </article>
+                </div>
+            </section>
+
             <!-- Formulario de contacto -->
-            <section class="contacto-formulario">
+            <section class="contacto-formulario" id="contacto">
                 <form class="formulario" action="enviar.php" method="post">
                     <h2>Formulario de Contacto</h2>
                     <fieldset>
@@ -112,8 +122,10 @@
                     </fieldset>
                 </form>
             </section>
+
+
             <!-- Seccion de Contacto -->
-            <section class="contacto" id="contacto">
+            <section class="contacto">
                 <div class="info-contacto">
                     <h2>Contacto</h2>
                     <ul>
@@ -125,10 +137,15 @@
                     <!-- Logos de Redes Sociales -->
                     <h2>Síguenos en nuestras redes sociales</h2>
                     <div class="redes-sociales">
-                        <a href="https://www.facebook.com/zocalosUniklas" target="_blank"><img src="resources/facebook.png" alt="Zócalos y accesorios Uniklas" width="40px">Zócalos y accesorios Uniklas</a>
-                        <a href="https://www.instagram.com/zocalosuniklas/?hl=es-la" target="_blank"><img src="resources/instagram.png" alt="ZOCALOSUNIKLAS" width="40px">ZOCALOSUNIKLAS</a>
+                        <a href="https://www.facebook.com/zocalosUniklas" target="_blank"><img
+                                src="resources/facebook.png" alt="Zócalos y accesorios Uniklas" width="40px">Zócalos y
+                            accesorios Uniklas</a>
+                        <a href="https://www.instagram.com/zocalosuniklas/?hl=es-la" target="_blank"><img
+                                src="resources/instagram.png" alt="ZOCALOSUNIKLAS" width="40px">ZOCALOSUNIKLAS</a>
                     </div>
                 </div>
+
+                
                 <!-- Mapa -->
                 <div class="mapa">
                     <h2>Nuestra ubicación</h2>
