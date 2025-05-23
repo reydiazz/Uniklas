@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNIKLAS</title>
+    <title>Uniklas</title>
     <link rel="stylesheet" href="estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,152 +14,297 @@
 
 <body>
 
-    <div class="contenedor" id="ubicacionInicio">
+    <div class="contenedor-principal" id="ubicacionInicio">
 
-        <!-- Barra de navegacion -->
-        <header class="header">
-            <div class="logo">
-                <a href="#ubicacionInicio">
-                    <img src="resources/logo.png" alt="UNIKLAS Perú">
-                </a>
-            </div>
-            <nav class="menu">
-                <a href="#ubicacionInicio" class="active">Inicio</a>
-                <a href="#ubicacionNosotros">Nosotros</a>
+        <!-- BARRA DE NAVEGACION -->
+        <header class="barra-navegacion">
+            <a href="#ubicacionInicio">
+                <img src="resources/logo.png" alt="UNIKLAS Perú" class="logo-principal">
+            </a>
+            <nav class="lista-navegacion">
+                <a href="#ubicacionInicio">Inicio</a>
                 <a href="#ubicacionProductos">Productos</a>
                 <a href="#contacto">Contacto</a>
+                <a href="#ubicacionNosotros">Nosotros</a>
             </nav>
         </header>
 
-        <!-- Cuerpo de la pagina -->
-        <main class="contenedor-main">
+        <!-- CARRUSEL DE IMAGENES (Falta implementar) -->
+        <div class="carrusel-imagenes">
+            <img src="resources/img-portada-1.png" alt="imagen-portada1">
+        </div>
 
-            <!-- Carrusel de imagenes -->
-            <div class="carrusel-imagenes">
-                <figure>
-                    <img src="img/1.jpg" alt="Imagen 1">
-                </figure>
-                <figure>
-                    <img src="img/2.jpg" alt="Imagen 2">
-                </figure>
-                <figure>
-                    <img src="img/3.jpg" alt="Imagen 3">
-                </figure>
-            </div>
-
-            <!-- Acerca de nosotros -->
-            <section class="acerca-de" id="ubicacionNosotros">
-                <h2>ACERCA DE NOSOTROS</h2>
-                <div class="acerca-de-contenido">
-                    <article class="historia">
-                        <h3>Historia</h3>
-                        <p>Somos UNIKLAS una empresa, con más de 15 años de experiencia y especializados en la
-                            fabricación
-                            de zócalos de madera, MDF y Tapajuntas para pisos laminados, madera, estructurados y entre
-                            otros.</p>
-                    </article>
-                    <article class="mision">
-                        <h3>Misión</h3>
-                        <p>Brindar a nuestros clientes un servicio de calidad, con productos innovadores y de alta
-                            durabilidad.</p>
-                    </article>
-                    <article class="vision">
-                        <h3>Visión</h3>
-                        <p>Ser la empresa líder en la fabricación de zócalos y tapajuntas a nivel nacional, con un
-                            crecimiento constante y un compromiso con el medio ambiente.</p>
-                    </article>
-                </div>
-            </section>
+        <!-- CUERPO DE LA PAGINA -->
+        <main class="contenedor-contenido">
 
             <!-- Seccion de Productos -->
-            <section class="nuestros" id="ubicacionProductos">
-                <h2>NUESTROS PRODUCTOS</h2>
-                <div class="nuestros-productos">
-                    <article class="producto">
-                        <img src="img/zocalos.jpg" alt="imagen 1">
-                        <h3>ZÓCALOS</h3>
-                        <p>Descripción del producto 1</p>
+            <section class="contenedor-principal-productos" id="ubicacionProductos">
+                <!-- <h1>NUESTROS PRODUCTOS</h1> -->
+                <div class="mostrador-productos">
+                    <article class="categoria-producto">
+                        <h3 class="nombre-categoria">ZÓCALOS</h3>
+                        <div class="categoria">
+                            <h4>POLIESTIRENO BLANCO</h4>
+                        </div>
+                        <div class="producto" id="producto-zocalo-poliestirenoblanco">
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenoblanco/roma.jpg" alt="zocalo-roma">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenoblanco/americano.jpg"
+                                    alt="zocalo-americano">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenoblanco/frances.jpg"
+                                    alt="zocalo-frances">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenoblanco/recto.jpg" alt="zocalo-recto">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenoblanco/cayro.jpg" alt="zocalo-cayro">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenoblanco/led.jpg" alt="zocalo-led">
+                            </div>
+                        </div>
+                        <div class="categoria">
+                            <h4>POLIESTIRENO COLOR</h4>
+                        </div>
+                        <div class="producto" id="producto-zocalo-poliestirenocolor">
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenocolor/avellana.jpg" alt="zocalo-1">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenocolor/cedro.jpg" alt="zocalo-2">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenocolor/petra.jpg" alt="zocalo-3">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenocolor/avellana.jpg" alt="zocalo-3">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenocolor/roble.jpg" alt="zocalo-3">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenocolor/gris.jpg" alt="zocalo-3">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenocolor/negro.jpg" alt="zocalo-3">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/poliestirenocolor/wengue.jpg" alt="zocalo-3">
+                            </div>
+
+                        </div>
+                        <div class="categoria">
+                            <h4>SANITARIO PVC</h4>
+                        </div>
+                        <div class="producto" id="producto-zocalo-pvc">
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/pvc/8cm.jpg" alt="zocalo-1">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/zocalo/pvc/10cm.jpg" alt="zocalo-1">
+                            </div>
+                        </div>
+
                     </article>
-                    <article class="producto">
-                        <img src="img/cornisas.jpg" alt="imagen 2">
-                        <h3>CORNISAS PARA EL TECHO</h3>
-                        <p>Descripción del producto 2</p>
+                    <article class="categoria-producto">
+                        <h3 class="nombre-categoria">CORNISAS PARA EL TECHO</h3>
+                        <div class="categoria">
+                            <h4>MEDIANA DENSIDAD</h4>
+                        </div>
+                        <div class="producto" id="producto-cornisa-medianadensidad">
+                            <div class="marco-imagen">
+                                <img src="resources/productos/conirsa/medianadensidad/minimalista.jpg" alt="corniza-1">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/conirsa/medianadensidad/clasico.jpg" alt="corniza-2">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/conirsa/medianadensidad/romano.jpg" alt="corniza-3">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/conirsa/medianadensidad/americano.jpg" alt="corniza-4">
+                            </div>
+                        </div>
+                        <div class="categoria">
+                            <h4>ALTA DENSIDAD</h4>
+                        </div>
+                        <div class="producto" id="productos-cornisa-altadensidad">
+                            <div class="marco-imagen">
+                                <img src="resources/productos/conirsa/altadensidad/minimalista.jpg"
+                                    alt="corniza-minimalista">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/conirsa/altadensidad/romano.jpg" alt="corniza-2">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/conirsa/altadensidad/americano.jpg" alt="corniza-3">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/conirsa/altadensidad/led.jpg" alt="corniza-4">
+                            </div>
+                        </div>
                     </article>
-                    <article class="producto">
-                        <img src="img/molduras.jpg" alt="imagen 3">
-                        <h3>MOLDURAS PARA PARED</h3>
-                        <p>Descripción del producto 3</p>
+
+                    <article class="categoria-producto">
+                        <h3 class="nombre-categoria">MOLDURAS PARA PARED</h3>
+                        <div class="producto" id="productos-moldura">
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/rodon.jpg" alt="moldura-rodon">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/xenia.jpg" alt="moldura-lira">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/medialuna.jpg" alt="moldura-xenia">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/zahra.jpg" alt="moldura-zahra">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/colonial.jpg" alt="moldura-colonial">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/agatha.jpg" alt="moldura-agatha">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/persa.jpg" alt="moldura-persa">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/recta.jpg" alt="moldura-recta">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/vittoria.jpg" alt="moldura-vittoria">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/nova.jpg" alt="moldura-nova">
+                            </div>
+                            <div class="marco-imagen">
+                                <img src="resources/productos/molduras/lira.jpg" alt="moldura-lira">
+                            </div>
+                        </div>
                     </article>
                 </div>
             </section>
 
-            <!-- Formulario de contacto -->
-            <section class="contacto-formulario" id="contacto">
-                <form class="formulario" action="enviar.php" method="post">
-                    <h2>Formulario de Contacto</h2>
-                    <fieldset>
-                        <p>Si tiene alguna pregunta sobre nosotros, contáctenos directamente y complete nuestro breve
-                            formulario de comentarios.</p>
-                        <div class="campo">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="campo">
-                            <label for="correo">Correo:</label>
-                            <input type="email" id="correo" name="correo" required>
-                        </div>
-                        <div class="campo">
-                            <label for="asunto">Asunto:</label>
-                            <input type="text" id="asunto" name="asunto" required>
-                        </div>
-                        <div class="campo">
-                            <label for="mensaje">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" required></textarea>
-                        </div>
-                        <div class="boton">
-                            <button type="submit">Enviar</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </section>
+            <!-- Contacto -->
+            <section class="contacto" id="contacto">
+                <h1>CONTACTO</h1>
+                <div class="contacto-info">
+                    <article class="info">
+
+                        <form class="formulario" action="enviar.php" method="post">
+                            <div class="formulario-distribucion">
+
+                                <!-- LADO IZQUIERDO -->
+                                <div class="parteIzquierda">
+                                    <h2>Escríbenos</h2>
+                                    <p>Si tiene alguna pregunta sobre nosotros, contáctenos directamente y complete
+                                        nuestro
+                                        breve formulario de comentarios.</p>
+                                    <fieldset class="formulario-principal">
+                                        <label class="custom-field">
+                                            <input type="text" required><span class="placeholder">Nombre
+                                            </span>
+                                        </label>
+                                        <label class="custom-field">
+                                            <input type="text" required><span class="placeholder">Correo
+                                            </span>
+                                        </label>
+                                        <label class="custom-field">
+                                            <input type="text" required><span class="placeholder">Asunto
+                                            </span>
+                                        </label>
+                                        <label class="custom-field">
+                                            <input type="text" required><span class="placeholder"> Mensaje
+                                            </span>
+                                        </label>
+                                        <div class="boton">
+                                            <button type="submit">ENVIAR</button>
+                                        </div>
+                                    </fieldset>
+                                    <div class="info-redes">
+                                        <h2>Vías de comunicación</h2>
+                                        <div class="redes-sociales">
+                                            <a href="" onclick="return false;" target="_blank"><img
+                                                    src="resources/telefono.png" alt="Zócalos y accesorios Uniklas"
+                                                    width="40px">(01) 5700 923</a>
+                                            <a href="" onclick="return false;" target="_blank"><img
+                                                    src="resources/celular.png" alt="ZOCALOSUNIKLAS" width="40px">934
+                                                232 698 / 947 332 715</a>
+                                            <a href="" onclick="return false;" target="_blank"><img
+                                                    src="resources/email.png" alt="ZOCALOSUNIKLAS"
+                                                    width="40px">ventas@Uniklas.pe</a>
+                                        </div>
+
+                                        <h2>Redes sociales</h2>
+                                        <div class="redes-sociales">
+                                            <a href="https://www.facebook.com/zocalosUniklas" target="_blank"><img
+                                                    src="resources/facebook.png" alt="Zócalos y accesorios Uniklas"
+                                                    width="40px">Uniklas</a>
+                                            <a href="https://www.instagram.com/zocalosuniklas/?hl=es-la"
+                                                target="_blank"><img src="resources/instagram.png" alt="ZOCALOSUNIKLAS"
+                                                    width="40px">zocalosUniklas</a>
+                                            <a href="https://www.tiktok.com/@zocalosuniklas?is_from_webapp=1&sender_device=pc"
+                                                target="_blank"><img src="resources/tiktok.png" alt="ZOCALOSUNIKLAS"
+                                                    width="40px">zocalosUniklas</a>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-            <!-- Seccion de Contacto -->
-            <section class="contacto">
-                <div class="info-contacto">
-                    <h2>Contacto</h2>
-                    <ul>
-                        <li>Teléfono: (01) 5700 923 / 934 232 698 / 947 332 715</li>
-                        <li>Correo: ventas@Uniklas.pe</li>
-                        <li>Local: Calle María Reiche 189 Santiago de Surco. Centro comercial Venturo Int 218 -Piso 2.
-                        </li>
-                    </ul>
-                    <!-- Logos de Redes Sociales -->
-                    <h2>Síguenos en nuestras redes sociales</h2>
-                    <div class="redes-sociales">
-                        <a href="https://www.facebook.com/zocalosUniklas" target="_blank"><img
-                                src="resources/facebook.png" alt="Zócalos y accesorios Uniklas" width="40px">Zócalos y
-                            accesorios Uniklas</a>
-                        <a href="https://www.instagram.com/zocalosuniklas/?hl=es-la" target="_blank"><img
-                                src="resources/instagram.png" alt="ZOCALOSUNIKLAS" width="40px">ZOCALOSUNIKLAS</a>
-                    </div>
-                </div>
+                                <!-- LADO DERECHO -->
+                                <div class="parteDerecha">
+                                    <div class="mapa">
+                                        <h2>Centro de atención</h2>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.327545864187!2d-76.9963274!3d-12.1209222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9005769c657%3A0x23f4f42364eae2a1!2sUNIKLAS!5e1!3m2!1ses!2spe!4v1747102141898!5m2!1ses!2spe"
+                                            width=100% height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                        <p>Calle María Reiche 189 Santiago de Surco. Centro comercial Venturo Int
+                                            218 - Piso 2.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
 
-                
-                <!-- Mapa -->
-                <div class="mapa">
-                    <h2>Nuestra ubicación</h2>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.327545864187!2d-76.9963274!3d-12.1209222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9005769c657%3A0x23f4f42364eae2a1!2sUNIKLAS!5e1!3m2!1ses!2spe!4v1747102141898!5m2!1ses!2spe"
-                        width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
                 </div>
             </section>
         </main>
+
+        <!-- Acerca de nosotros -->
+        <section class="acerca-de" id="ubicacionNosotros">
+            <h1>ACERCA DE NOSOTROS</h1>
+            <div class="acerca-de-contenido">
+                <article class="historia">
+                    <h3>Historia</h3>
+                    <p>Con 15 años en el mercado, hemos crecido con compromiso, calidad y confianza.
+                        Desde nuestros inicios, nos esforzamos por brindar soluciones que marquen la diferencia.</p>
+                    <img src="resources/historia.jpg" alt="historia">
+                </article>
+                <article class="mision">
+                    <h3>Misión</h3>
+                    <p>Brindar a nuestros clientes un servicio de calidad, con productos innovadores y de alta
+                        durabilidad.</p>
+                </article>
+                <article class="vision">
+                    <h3>Visión</h3>
+                    <p>Ser la empresa líder en la fabricación de zócalos y tapajuntas a nivel nacional, con un
+                        crecimiento constante y un compromiso con el medio ambiente.</p>
+                </article>
+            </div>
+        </section>
         <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Uniklas. Todos los derechos reservados.</p>
+        <footer class="footer_contenido">
+            <div class="footer_info">
+                <p>&copy; 2025 Uniklas. Todos los derechos reservados.</p>
+            </div>
         </footer>
     </div>
 </body>
