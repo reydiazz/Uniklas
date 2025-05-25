@@ -55,10 +55,10 @@ fieldset {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    box-shadow: 0px 0x 0px 0px rgba(0, 0, 0, 0);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .lista-navegacion {
@@ -89,15 +89,11 @@ fieldset {
 
 .carrusel-imagenes {
     position: relative;
-    width: 100vw;              /* Ocupa todo el ancho de la ventana */
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;        /* Centra el carrusel */
-    margin-right: -50vw;
-    height: 800px;             /* Tamaño del fondo */
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 700px;
     overflow: hidden;
-    border-radius: 0;          /* Sin bordes redondeados */
-    background: url('resources/img-portada-1.png') center center/cover no-repeat;  /* Fondo para el carrusel */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,51 +116,42 @@ fieldset {
     z-index: 1;
 }
 
-.carrusel-slide img {
-    width: 90vw;        /* Ocupa casi todo el ancho visible */
-    max-width: 1400px;  /* Tamaño máximo para pantallas grandes */
-    height: 85%;        /* Ajusta la altura relativa al carrusel */
-    object-fit: contain;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    background: rgba(255,255,255,0.1);
-}
-
 .carrusel-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Ajusta el centrado vertical exacto */
+    transform: translateY(-50%);
+    /* Ajusta el centrado vertical exacto */
     width: 55px;
     height: 55px;
-    background: #fff;
-    color: #a2c238;
+    background: transparent;
+    color: #888888;
     border: none;
     font-size: 2.3rem;
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
     transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
     outline: none;
     padding: 0;
     line-height: 1;
 }
+
 /* Posiciona el botón izquierdo */
-.carrusel-btn.prev { 
-    left: 24px; 
+.carrusel-btn.prev {
+    left: 15px;
 }
+
 /* Posiciona el botón derecho */
-.carrusel-btn.next { 
-    right: 24px; 
+.carrusel-btn.next {
+    right: 15px;
 }
+
 /* Efecto al pasar el mouse o enfocar el botón */
-.carrusel-btn:hover, .carrusel-btn:focus {
-    background: #a2c238;
-    color: #fff;
-    box-shadow: 0 8px 24px rgba(162, 194, 56, 0.18);
+.carrusel-btn:hover,
+.carrusel-btn:focus {
     transform: translateY(-50%) scale(1.08);
 }
 
@@ -182,21 +169,20 @@ fieldset {
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: #fff;
     opacity: 0.6;
     cursor: pointer;
     transition: opacity 0.2s, background 0.2s;
-    border: 2px solid #a2c238;
+    background: #888888;
 }
 
 .carrusel-dots .dot.active {
     opacity: 1;
-    background: #a2c238;
+    background: #888888;
 }
 
 .carrusel-imagenes img {
-    max-width: 100%;
-    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     display: block
 }
@@ -205,6 +191,14 @@ fieldset {
 
 
 /* PRODUCTOS */
+
+.contenedor-principal-productos {
+    max-width: 1920px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
 
 .nombre-categoria {
     background-color: #eb9e00;
@@ -272,27 +266,27 @@ fieldset {
 }
 
 #productos-moldura .marco-imagen :hover {
-    box-shadow: 1px 4px 10px rgb(235, 158, 0, 3);
+    box-shadow: 1px 4px 10px rgb(235, 158, 0, 0.5);
 }
 
 #producto-cornisa-medianadensidad .marco-imagen :hover {
-    box-shadow: 1px 4px 10px rgb(235, 158, 0, 3);
+    box-shadow: 1px 4px 10px rgb(235, 158, 0, 0.5);
 }
 
 #producto-zocalo-poliestirenoblanco .marco-imagen :hover {
-    box-shadow: 1px 4px 10px rgb(235, 158, 0, 3);
+    box-shadow: 1px 4px 10px rgb(235, 158, 0, 0.5);
 }
 
 #producto-zocalo-pvc .marco-imagen :hover {
-    box-shadow: 1px 4px 10px rgb(144, 156, 156, 5);
+    box-shadow: 1px 4px 10px rgb(144, 156, 156, 0.5);
 }
 
 #producto-zocalo-poliestirenocolor .marco-imagen :hover {
-    box-shadow: 1px 4px 10px rgb(0, 0, 0, 3);
+    box-shadow: 1px 4px 10px rgb(0, 0, 0, 0.5);
 }
 
 #productos-cornisa-altadensidad .marco-imagen :hover {
-    box-shadow: 1px 4px 10px rgb(50, 114, 180, 3);
+    box-shadow: 1px 4px 10px rgb(50, 114, 180, 0.5);
 }
 
 
@@ -301,22 +295,48 @@ fieldset {
 
 
 /* CONTACTO */
+.contacto {
+    width: 100%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
 
 .contacto h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     margin-bottom: 24px;
     color: #333;
 }
 
+
+.info-com h4 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.parteIzquierda h4 {
+    margin-top: 0px;
+    text-align: left;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.mapa h4 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 30px;
+}
+
 .contacto-info {
     display: flex;
-    gap: 60px;
-    padding: 30px;
+    gap: 20px;
+    padding: 20px;
+    margin: 0px 0px;
     justify-content: center;
     align-items: stretch;
     border-radius: 5px;
-    margin-bottom: -40px;
     display: flex;
     flex-flow: row wrap;
 }
@@ -338,11 +358,10 @@ fieldset {
     margin-bottom: 0px;
 }
 
-.formulario p {
-    max-width: 100%;
-    text-align: left;
-    margin-top: 0px;
+.formulario-principal {
+    border: none;
 }
+
 
 .formulario-distribucion {
     display: flex;
@@ -352,31 +371,34 @@ fieldset {
 }
 
 .parteIzquierda {
+    align-items: center;
+    justify-content: center;
     flex: 1;
+    padding: 0;
 }
 
 
 .parteDerecha {
     flex: 1;
-    border: none;
     padding: 0;
 }
 
 .custom-field {
     display: flex;
+    width: 100%;
     flex-direction: column;
     position: relative;
-    font-size: 14px;
-    margin-bottom: 17px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .custom-field input {
     appearance: none;
     border: 2px solid #ddd;
-    background: none;
     padding: 14px 12px 14px 12px;
     border-radius: 3px;
-    width: 100%;
+    width: 90%;
+    height: 40px;
     outline: none;
     transition: border-color 0.3s ease;
     font-size: 14px;
@@ -402,7 +424,7 @@ fieldset {
 .custom-field input:focus+.placeholder,
 .custom-field input:valid+.placeholder {
     top: 0px;
-    font-size: 12px;
+    font-size: 15px;
     color: #333;
 }
 
@@ -413,14 +435,15 @@ fieldset {
 }
 
 .boton button {
-    width: auto;
+    width: 250px;
+    height: 60px;
     margin-top: 20px;
     border: none;
     border-radius: 3px;
     font-family: "Montserrat", sans-serif;
     padding: 10px 70px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     color: white;
     background-color: #a2c238;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -432,13 +455,6 @@ fieldset {
     transform: translateY(-5px);
 }
 
-/* REDES SOCIALES Y MAPA */
-
-
-.info-redes {
-    flex: 1;
-}
-
 .lista-redes {
     gap: 20px;
     display: flex;
@@ -447,22 +463,27 @@ fieldset {
 }
 
 
-.info-redes h2 {
-    text-align: left;
+.info-com {
+    margin-top: 2%;
+    justify-content: center;
+    display: flex;
+    gap: 10%;
 }
 
-
-
 .redes-sociales {
+    margin-top: 2%;
+    margin-bottom: 2%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    justify-content: center;
+    /* centra horizontalmente */
+    align-items: center;
+    /* centra verticalmente */
+    gap: 5%;
 }
 
 
 .redes-sociales a {
-    flex: 1 1 200px;
+    font-size: 25px;
 }
 
 .redes-sociales img {
@@ -484,81 +505,59 @@ fieldset {
 .mapa iframe {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
     border-radius: 5px;
+    height: 550px;
+    min-width: 200px;
 }
 
 /* ACERCA DE NOSOTROS */
 
-.acerca-de {
-    padding: 30px;
-}
-
-.acerca-de>h2 {
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 24px;
-    letter-spacing: 2px;
-    color: #333;
-}
 
 .acerca-de-contenido {
-    display: flex;
-    gap: 60px;
-    padding: 20px;
-    margin: 30px 0px;
     justify-content: center;
-    align-items: stretch;
-    border-radius: 5px;
+    align-items: flex-start;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 60px;
+    padding: 40px 40px;
 }
 
-.acerca-de-contenido>p {
-    width: 250px;
+
+
+.acerca-de-contenido p {
     word-wrap: break-word;
     white-space: normal;
     overflow: hidden;
     line-height: 1.6;
-    font-size: 16px;
-}
-
-.acerca-de-contenido>h3 {
-    width: 250px;
-}
-
-.acerca-de-contenido article h3 {
-    color: rgb(129, 95, 79);
-}
-
-.acerca-de-contenido article img {
-    width: 250px;
-    height: auto;
-}
-
-.historia>h3,
-.mision>h3,
-.vision>h3 {
-    color: #333;
     font-size: 30px;
-    font-weight: 700;
+}
+
+.historia h3,
+.vision h3,
+.mision h3 {
+    color: rgb(129, 95, 79);
+    font-size: 40px;
     margin-bottom: -10px;
     margin-top: -5px;
 }
 
+
+.acerca-de-contenido article img {
+    width: 400px;
+    height: auto;
+}
+
 .acerca-de-contenido article {
     background-color: #fff;
-    width: 400px;
+    width: 550px;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 80px;
     text-align: center;
 }
 
-.acerca-de-contenido article:hover {
-    transform: translateY(-5px);
-    box-shadow: 1px 4px 10px rgba(0, 0, 0, 1);
-}
 
 /*---------------------------------------------------------------------*/
 
@@ -587,6 +586,75 @@ fieldset {
 
 /* TABLET - CELULAR*/
 @media (max-width:798px) {
+    .boton button {
+        width: 190px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .custom-field input {
+        height: 10px;
+    }
+
+    .custom-field {
+        font-size: 15px;
+    }
+
+    .informacion-d h2 {
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+
+    .contenedor-img img {
+        width: 60px;
+    }
+
+
+    .info-com h4 {
+        font-size: 15px;
+    }
+
+    .parteIzquierda h4 {
+        font-size: 15px;
+    }
+
+    .mapa h4 {
+        font-size: 15px;
+    }
+
+    .mapa iframe {
+        height: 200px;
+    }
+
+    .parteIzquierda {
+        order: 1;
+    }
+
+    .parteDerecha {
+        order: 2;
+    }
+
+    .formulario-distribucion h2 {
+        font-size: 1.2rem;
+    }
+
+    .carrusel-btn {
+        font-size: 2rem;
+    }
+
+    .carrusel-dots .dot {
+        width: 11px;
+        height: 10px;
+    }
+
+    .carrusel-imagenes {
+        height: 350px;
+    }
+
+    .categoria h4 {
+        font-size: 2.4rem;
+    }
+
     .barra-navegacion {
         flex-direction: column;
         gap: 15px;
@@ -600,8 +668,9 @@ fieldset {
     }
 
     .lista-navegacion a {
+        font-size: 15;
         display: block;
-        width: 100%;
+        width: 100;
         text-align: center;
     }
 
@@ -620,6 +689,19 @@ fieldset {
 
 @media (max-width:580px) {
 
+    .formulario-distribucion h2 {
+        font-size: 1rem;
+    }
+
+
+    .carrusel-imagenes {
+        height: 200px;
+    }
+
+    .categoria h4 {
+        font-size: 2rem;
+    }
+
     .marco-imagen {
         width: 300px;
         height: auto;
@@ -636,6 +718,27 @@ fieldset {
 }
 
 @media (max-width:380px) {
+    .formulario-distribucion h2 {
+        font-size: 1rem;
+    }
+
+    .carrusel-btn {
+        font-size: 1.5rem;
+    }
+
+    .carrusel-dots .dot {
+        width: 6px;
+        height: 5px;
+    }
+
+    .carrusel-imagenes {
+        height: 150px;
+    }
+
+
+    .categoria h4 {
+        font-size: 0.7rem;
+    }
 
     h1 {
         font-size: 1.5rem;
@@ -643,7 +746,7 @@ fieldset {
 
     .nombre-categoria {
         margin-bottom: 30px;
-        font-size: 10px;
+        font-size: 0.7rem;
         text-align: center;
     }
 }
