@@ -88,13 +88,110 @@ fieldset {
 /*CARRUSEL IMAGENES*/
 
 .carrusel-imagenes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
     position: relative;
+    width: 100vw;              /* Ocupa todo el ancho de la ventana */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;        /* Centra el carrusel */
+    margin-right: -50vw;
+    height: 800px;             /* Tamaño del fondo */
+    overflow: hidden;
+    border-radius: 0;          /* Sin bordes redondeados */
+    background: url('resources/img-portada-1.png') center center/cover no-repeat;  /* Fondo para el carrusel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.carrusel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.7s;
+}
+
+.carrusel-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carrusel-slide img {
+    width: 90vw;        /* Ocupa casi todo el ancho visible */
+    max-width: 1400px;  /* Tamaño máximo para pantallas grandes */
+    height: 85%;        /* Ajusta la altura relativa al carrusel */
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.1);
+}
+
+.carrusel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Ajusta el centrado vertical exacto */
+    width: 55px;
+    height: 55px;
+    background: #fff;
+    color: #a2c238;
+    border: none;
+    font-size: 2.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+    outline: none;
+    padding: 0;
+    line-height: 1;
+}
+/* Posiciona el botón izquierdo */
+.carrusel-btn.prev { 
+    left: 24px; 
+}
+/* Posiciona el botón derecho */
+.carrusel-btn.next { 
+    right: 24px; 
+}
+/* Efecto al pasar el mouse o enfocar el botón */
+.carrusel-btn:hover, .carrusel-btn:focus {
+    background: #a2c238;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(162, 194, 56, 0.18);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carrusel-dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.carrusel-dots .dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.2s, background 0.2s;
+    border: 2px solid #a2c238;
+}
+
+.carrusel-dots .dot.active {
+    opacity: 1;
+    background: #a2c238;
 }
 
 .carrusel-imagenes img {
@@ -328,6 +425,7 @@ fieldset {
     background-color: #a2c238;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .boton button:hover {
@@ -385,6 +483,7 @@ fieldset {
 
 .mapa iframe {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
+    border-radius: 5px;
 }
 
 /* ACERCA DE NOSOTROS */
@@ -450,7 +549,7 @@ fieldset {
     width: 400px;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 1px 4px 10px rgb(162, 194, 56, 6);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-width: 80px;
     text-align: center;
@@ -458,7 +557,7 @@ fieldset {
 
 .acerca-de-contenido article:hover {
     transform: translateY(-5px);
-    box-shadow: 1px 4px 10px rgb(162, 194, 56, 6);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 1);
 }
 
 /*---------------------------------------------------------------------*/
