@@ -17,9 +17,9 @@
     <div class="contenedor-principal" id="ubicacionInicio">
 
         <!-- BARRA DE NAVEGACION -->
-        <header class="barra-navegacion">
+        <header class="contenedor-barra-navegacion">
             <a href="#ubicacionInicio">
-                <img src="resources/iconos/logo.png" alt="UNIKLAS Perú" class="logo-principal">
+                <img src="resources/iconos/logo.png" alt="UNIKLAS Perú" class="img-logo-barra-navegacion">
             </a>
             <nav class="lista-navegacion">
                 <a href="#ubicacionInicio">Inicio</a>
@@ -29,7 +29,7 @@
             </nav>
         </header>
 
-        <!-- CARRUSEL DE IMAGENES (Falta implementar) -->
+        <!-- CARRUSEL DE IMAGENES -->
         <div class="carrusel-imagenes">
             <div class="carrusel-slide active">
                 <img src="resources/carrusel/img-carrusel-1.jpg" alt="Slide 1">
@@ -40,10 +40,8 @@
             <div class="carrusel-slide">
                 <img src="resources/carrusel/img-carrusel-3.jpg" alt="Slide 3">
             </div>
-            <!--&#10094 y &#10095 representa caracteres, icono de flecha -->
             <button class="carrusel-btn prev">&#10094;</button>
             <button class="carrusel-btn next">&#10095;</button>
-            <!--O reemplazar esto por imagen de botones o flechas-->
             <div class="carrusel-dots">
                 <span class="dot active"></span>
                 <span class="dot"></span>
@@ -53,18 +51,18 @@
 
 
         <!-- CUERPO DE LA PAGINA -->
-        <main class="contenedor-contenido">
+        <main class="contenedor-cuerpo">
 
-            <!-- Seccion de Productos -->
+            <!-- PRODUCTOS -->
             <section class="contenedor-principal-productos" id="ubicacionProductos">
-                 <h1>NUESTROS PRODUCTOS</h1>
-                <div class="mostrador-productos">
-                    <article class="categoria-producto">
-                        <h3 class="nombre-categoria">ZÓCALOS</h3>
-                        <div class="categoria">
+                <h1>NUESTROS PRODUCTOS</h1>
+                <div class="contenedor-secundario-productos">
+                    <article class="contenedor-categoria-producto">
+                        <h3 class="nombre-categoria-productos">ZÓCALOS</h3>
+                        <div class="titulo-categoria">
                             <h4>POLIESTIRENO BLANCO</h4>
                         </div>
-                        <div class="producto" id="producto-zocalo-poliestirenoblanco">
+                        <div class="contenedor-producto" id="producto-zocalo-poliestirenoblanco">
                             <div class="marco-imagen">
                                 <img src="resources/productos/zocalo/poliestirenoblanco/roma.jpg" alt="zocalo-roma">
                             </div>
@@ -86,10 +84,10 @@
                                 <img src="resources/productos/zocalo/poliestirenoblanco/led.jpg" alt="zocalo-led">
                             </div>
                         </div>
-                        <div class="categoria">
+                        <div class="titulo-categoria">
                             <h4>POLIESTIRENO COLOR</h4>
                         </div>
-                        <div class="producto" id="producto-zocalo-poliestirenocolor">
+                        <div class="contenedor-producto" id="producto-zocalo-poliestirenocolor">
                             <div class="marco-imagen">
                                 <img src="resources/productos/zocalo/poliestirenocolor/avellana.jpg" alt="zocalo-1">
                             </div>
@@ -116,10 +114,10 @@
                             </div>
 
                         </div>
-                        <div class="categoria">
+                        <div class="titulo-categoria">
                             <h4>SANITARIO PVC</h4>
                         </div>
-                        <div class="producto" id="producto-zocalo-pvc">
+                        <div class="contenedor-producto" id="producto-zocalo-pvc">
                             <div class="marco-imagen">
                                 <img src="resources/productos/zocalo/pvc/8cm.jpg" alt="zocalo-1">
                             </div>
@@ -129,12 +127,12 @@
                         </div>
 
                     </article>
-                    <article class="categoria-producto">
-                        <h3 class="nombre-categoria">CORNISAS PARA EL TECHO</h3>
-                        <div class="categoria">
+                    <article class="contenedor-categoria-producto">
+                        <h3 class="nombre-categoria-productos">CORNISAS PARA EL TECHO</h3>
+                        <div class="titulo-categoria">
                             <h4>MEDIANA DENSIDAD</h4>
                         </div>
-                        <div class="producto" id="producto-cornisa-medianadensidad">
+                        <div class="contenedor-producto" id="producto-cornisa-medianadensidad">
                             <div class="marco-imagen">
                                 <img src="resources/productos/conirsa/medianadensidad/minimalista.jpg" alt="corniza-1">
                             </div>
@@ -148,10 +146,10 @@
                                 <img src="resources/productos/conirsa/medianadensidad/americano.jpg" alt="corniza-4">
                             </div>
                         </div>
-                        <div class="categoria">
+                        <div class="titulo-categoria">
                             <h4>ALTA DENSIDAD</h4>
                         </div>
-                        <div class="producto" id="productos-cornisa-altadensidad">
+                        <div class="contenedor-producto" id="productos-cornisa-altadensidad">
                             <div class="marco-imagen">
                                 <img src="resources/productos/conirsa/altadensidad/minimalista.jpg"
                                     alt="corniza-minimalista">
@@ -168,9 +166,9 @@
                         </div>
                     </article>
 
-                    <article class="categoria-producto">
-                        <h3 class="nombre-categoria">MOLDURAS PARA PARED</h3>
-                        <div class="producto" id="productos-moldura">
+                    <article class="contenedor-categoria-producto">
+                        <h3 class="nombre-categoria-productos">MOLDURAS PARA PARED</h3>
+                        <div class="contenedor-producto" id="productos-moldura">
                             <div class="marco-imagen">
                                 <img src="resources/productos/molduras/rodon.jpg" alt="moldura-rodon">
                             </div>
@@ -209,107 +207,116 @@
                 </div>
             </section>
 
-            <!-- Contacto -->
-            <section class="contacto" id="contacto">
+            <!-- CONTACTO -->
+            <section class="contenedor-principal-contacto" id="contacto">
                 <h1>CONTACTO</h1>
-                <div class="contacto-info">
-                    <article class="info">
+                <article class="info">
 
-                        <form class="formulario" action="enviar.php" method="post">
-                            <div class="formulario-distribucion">
+                    <form class="formulario" action="enviar.php" method="post">
+                        <div class="formulario-distribucion">
 
-                                <!-- LADO IZQUIERDO -->
-                                <div class="parteIzquierda">
-                                    <h2>Escríbenos</h2>
-                                    <h4>Si tiene alguna pregunta sobre nosotros, contáctenos directamente y complete
-                                        nuestro
-                                        breve formulario de comentarios.</h4>
-                                    <fieldset class="formulario-principal">
-                                        <label class="custom-field">
-                                            <input type="text" required><span class="placeholder">Nombre
-                                            </span>
-                                        </label>
-                                        <label class="custom-field">
-                                            <input type="text" required><span class="placeholder">Correo
-                                            </span>
-                                        </label>
-                                        <label class="custom-field">
-                                            <input type="text" required><span class="placeholder">Asunto
-                                            </span>
-                                        </label>
-                                        <label class="custom-field">
-                                            <input type="text" required><span class="placeholder"> Mensaje
-                                            </span>
-                                        </label>
-                                        <div class="boton">
-                                            <button type="submit">ENVIAR</button>
-                                        </div>
-                                    </fieldset>
-
-                                </div>
-                                <!-- LADO DERECHO -->
-                                <div class="parteDerecha">
-                                    <div class="mapa">
-                                        <h2>Centro de atención</h2>
-                                        <iframe
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.327545864187!2d-76.9963274!3d-12.1209222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9005769c657%3A0x23f4f42364eae2a1!2sUNIKLAS!5e1!3m2!1ses!2spe!4v1747102141898!5m2!1ses!2spe"
-                                            width=100% height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                            referrerpolicy="no-referrer-when-downgrade">
-                                        </iframe>
-                                        <h4>Calle María Reiche 189 Santiago de Surco. Centro comercial Venturo Int
-                                            218 - Piso 2.</h4>
+                            <!-- LADO IZQUIERDO -->
+                            <div class="parteIzquierda">
+                                <h2>Escríbenos</h2>
+                                <h4>Si tiene alguna pregunta sobre nosotros, contáctenos directamente y complete
+                                    nuestro
+                                    breve formulario de comentarios.</h4>
+                                <fieldset class="formulario-principal">
+                                    <label class="custom-field">
+                                        <input type="text" required><span class="placeholder">Nombre
+                                        </span>
+                                    </label>
+                                    <label class="custom-field">
+                                        <input type="text" required><span class="placeholder">Correo
+                                        </span>
+                                    </label>
+                                    <label class="custom-field">
+                                        <input type="text" required><span class="placeholder">Asunto
+                                        </span>
+                                    </label>
+                                    <label class="custom-field">
+                                        <input type="text" required><span class="placeholder"> Mensaje
+                                        </span>
+                                    </label>
+                                    <div class="boton">
+                                        <button type="submit">ENVIAR</button>
                                     </div>
-                                </div>
+                                </fieldset>
+
                             </div>
+                            <!-- LADO DERECHO -->
+                            <div class="parteDerecha">
 
-                            <div class="informacion-d">
-                                <div class="info-com">
-                                    <div class="contenedor-img">
-                                        <img src="resources/iconos/telephone.png" alt="telefono">
-                                        <h4>Telefono: (01) 5700 923 </h4>
-                                    </div>
-                                    <div class="contenedor-img">
-                                        <img src="resources/iconos/email.png" alt="email">
-                                        <h4>Email: ventas@Uniklas.pe</h4>
-                                    </div>
-                                    <div class="contenedor-img">
-                                        <img src="resources/iconos/phone.png" alt="smartphone">
-                                        <h4>Celular: 934 232 698 / 947 332 715</h4>
-                                    </div>
-                                </div>
+                                <h2>Centro de atención</h2>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4891.327545864187!2d-76.9963274!3d-12.1209222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9005769c657%3A0x23f4f42364eae2a1!2sUNIKLAS!5e0!3m2!1ses!2spe!4v1747102141898!5m2!1ses!2spe"
+                                    width=100% height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                                <h4>Calle María Reiche 189 Santiago de Surco. Centro comercial Venturo Int
+                                    218 - Piso 2.</h4>
+
                             </div>
-                        </form>
-                    </article>
+                        </div>
 
-                </div>
+
+                        <div class="info-com">
+                            <div class="contenedor-img">
+                                <h2>Telefono</h2>
+                                <img src="resources/iconos/telephone.png" alt="telefono">
+                                <h4>(01) 5700 923 </h4>
+                            </div>
+                            <div class="contenedor-img">
+                                <h2>Email</h2>
+                                <img src="resources/iconos/email.png" alt="email">
+                                <h4>ventas@Uniklas.pe</h4>
+                            </div>
+                            <div class="contenedor-img">
+                                <h2>Celular</h2>
+                                <img src="resources/iconos/phone.png" alt="smartphone">
+                                <h4>+51 934 232 698</h4>
+                            </div>
+                        </div>
+
+                    </form>
+                </article>
+
+
             </section>
         </main>
 
-        <!-- Acerca de nosotros -->
+        <!-- ACERCA DE NOSOTROS -->
         <div id="ubicacionNosotros">
             <h1>ACERCA DE NOSOTROS</h1>
             <div class="acerca-de-contenido">
                 <article class="historia">
                     <h3>Historia</h3>
-                    <p>Con 15 años en el mercado, hemos crecido con compromiso, calidad y confianza.
-                        Desde nuestros inicios, nos esforzamos por brindar soluciones que marquen la diferencia.</p>
-                    <img src="resources/iconos/historia.jpg" alt="historia">
+                    <p>Con 15 años en el mercado, hemos crecido con compromiso, calidad y confianza.</p>
+                    <div class="contenedor-img-nosotros">
+                        <img src="resources/iconos/historia.jpg" alt="historia">
+                    </div>
                 </article>
                 <article class="mision">
                     <h3>Misión</h3>
                     <p>Brindar a nuestros clientes un servicio de calidad, con productos innovadores y de alta
                         durabilidad.</p>
+                    <div class="contenedor-img-nosotros">
+                        <img src="resources/iconos/mision.jpg" alt="mision">
+                    </div>
                 </article>
                 <article class="vision">
                     <h3>Visión</h3>
-                    <p>Ser la empresa líder en la fabricación de zócalos y tapajuntas a nivel nacional, con un
-                        crecimiento constante y un compromiso con el medio ambiente.</p>
+                    <p>Ser la empresa líder en la fabricación de zócalos y tapajuntas a nivel nacional.</p>
+                    <div class="contenedor-img-nosotros">
+                        <img src="" alt="vision">
+                    </div>
                 </article>
             </div>
 
             <div class="redes-sociales">
-                <a href="https://www.facebook.com/zocalosUniklas" target="_blank"><img src="resources/iconos/facebook.png"
-                        alt="Zócalos y accesorios Uniklas" width="40px">zocalosUniklas</a>
+                <a href="https://www.facebook.com/zocalosUniklas" target="_blank"><img
+                        src="resources/iconos/facebook.png" alt="Zócalos y accesorios Uniklas"
+                        width="40px">zocalosUniklas</a>
                 <a href="https://www.instagram.com/zocalosuniklas/?hl=es-la" target="_blank"><img
                         src="resources/iconos/instagram.png" alt="ZOCALOSUNIKLAS" width="40px">zocalosUniklas</a>
                 <a href="https://www.tiktok.com/@zocalosuniklas?is_from_webapp=1&sender_device=pc" target="_blank"><img
@@ -318,14 +325,16 @@
         </div>
 
 
-        <!-- Footer -->
+        <!-- FOOTER  -->
         <footer class="footer_contenido">
             <div class="footer_info">
                 <p>&copy; 2025 Uniklas. Todos los derechos reservados.</p>
             </div>
         </footer>
     </div>
+
     <script src="codigo.js"></script>
+
 </body>
 
 </html>
