@@ -114,9 +114,6 @@ a {
 }
 
 .carrusel-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -129,10 +126,15 @@ a {
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
-    outline: none;
-    padding: 0;
-    line-height: 1;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrusel-btn:hover,
+.carrusel-btn:focus {
+    transform: translateY(-50%) scale(1.15);    
 }
 
 .carrusel-btn.prev {
@@ -141,11 +143,6 @@ a {
 
 .carrusel-btn.next {
     right: 15px;
-}
-
-.carrusel-btn:hover,
-.carrusel-btn:focus {
-    transform: translateY(-50%) scale(1.08);
 }
 
 .carrusel-dots {

@@ -1,41 +1,43 @@
+/* Carrusel de imágenes */
 let current = 0;
 const slides = document.querySelectorAll('.carrusel-slide');
 const dots = document.querySelectorAll('.carrusel-dots .dot');
 const total = slides.length;
 let interval = setInterval(nextSlide, 4000);
 
-function showSlide(idx) {
+function mostrarSlide(indice) {
     slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === idx);
-        dots[i].classList.toggle('active', i === idx);
+        slide.classList.toggle('active', i === indice);
+        dots[i].classList.toggle('active', i === indice);
     });
-    current = idx;
+    current = indice;
 }
 
 function nextSlide() {
-    showSlide((current + 1) % total);
+    mostrarSlide((current + 1) % total);
 }
 
 function prevSlide() {
-    showSlide((current - 1 + total) % total);
+    mostrarSlide((current - 1 + total) % total);
 }
 
 document.querySelector('.carrusel-btn.next').onclick = () => {
     nextSlide();
-    resetInterval();
+    resetearIntervalo();
 };
 document.querySelector('.carrusel-btn.prev').onclick = () => {
     prevSlide();
-    resetInterval();
+    resetearIntervalo();
 };
 dots.forEach((dot, i) => {
     dot.onclick = () => {
-        showSlide(i);
-        resetInterval();
+        mostrarSlide(i);
+        resetearIntervalo();
     };
 });
 
-function resetInterval() {
+function resetearIntervalo() {
     clearInterval(interval);
     interval = setInterval(nextSlide, 4000);
 }
+
