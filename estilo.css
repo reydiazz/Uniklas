@@ -647,6 +647,32 @@ a {
 
 }
 
+@media(max-width:390px) {
+
+
+    .custom-field input {
+        height: 45px;
+        width: 220px;
+    }
+
+    .custom-field {
+        font-size: 15px;
+    }
+
+    .boton button {
+        height: 45px;
+        width: 220px;
+        font-size: 15px;
+    }
+
+
+    .custom-field input:focus+.placeholder,
+    .custom-field input:valid+.placeholder {
+        font-size: 15px;
+    }
+}
+
+
 @media(max-width:375px) {
 
     .titulo-categoria h4 {
