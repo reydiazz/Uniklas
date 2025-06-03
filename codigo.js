@@ -5,6 +5,7 @@ const dots = document.querySelectorAll('.carrusel-dots .dot');
 const total = slides.length;
 let interval = setInterval(nextSlide, 4000);
 
+
 function mostrarSlide(indice) {
     slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === indice);
@@ -41,3 +42,19 @@ function resetearIntervalo() {
     interval = setInterval(nextSlide, 4000);
 }
 
+
+
+let acceso = true;
+
+const nav = document.querySelector("#navegacion")
+const abrirYcerrar = document.querySelector("#abrirYcerrar")
+
+abrirYcerrar.addEventListener("click", () => {
+    if (acceso) {
+        nav.classList.add("lista-navegacion_visible")
+        acceso = false;
+    } else {
+        nav.classList.remove("lista-navegacion_visible")
+        acceso = true;
+    }
+})

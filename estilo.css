@@ -41,6 +41,17 @@ a {
     max-width: 100%;
 }
 
+.abrir_menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.abrir_menu img {
+    width: 30px;
+    height: 20px;
+}
+
 .contenedor-barra-navegacion {
     background-color: rgb(255, 255, 255);
     padding: 20px 20px;
@@ -60,7 +71,6 @@ a {
 
 .lista-navegacion {
     display: flex;
-    /*Distancia entre las etiquetas a*/
     gap: 20px;
 }
 
@@ -512,30 +522,65 @@ a {
 
 /*---------------------------------------------------------------------*/
 
-@media (max-width:798px) {
+@media (max-width:844px) {
 
     h1 {
         font-size: 3rem;
     }
 
+    .img-logo-barra-navegacion {
+        width: 200px;
+    }
+
+    .abrir_menu {
+        display: block;
+    }
+
+    .abrir_menu img {
+        margin-top: 10px;
+    }
+
+    .encabezado-principal {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+    }
+
     /* Barra de navegacion */
     .contenedor-barra-navegacion {
-        /* Elementos ordenados de manera vertical*/
-        flex-direction: column;
-        gap: 15px;
-        min-height: 100px;
+        gap: 10px;
+        box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .lista-navegacion {
-        /* Elementos ordenados de manera vertical*/
-        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        max-height: 0;
+        padding: 0;
+        justify-content: center;
+        opacity: 0;
+        display: flex;
+        gap: 10px;
+        transition: max-height 0.2s ease, padding 0.2s ease, opacity 0.2s ease;
+    }
 
+    .lista-navegacion_visible {
+        opacity: 1;
+        max-height: 600px;
+        padding-bottom: 20px;
+    }
+
+    .lista-navegacion_invisible {
+        opacity: 0;
     }
 
     .lista-navegacion a {
-        font-size: 15;
+        font-size: 15px;
         display: block;
-        width: 100;
         text-align: center;
     }
 
@@ -629,6 +674,16 @@ a {
 
 @media(max-width:425px) {
 
+    .encabezado-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-navegacion {
+        flex-direction: column;
+    }
+
     .formulario-distribucion {
         gap: 10px;
     }
@@ -687,6 +742,10 @@ a {
 
 @media(max-width:320px) {
 
+    .abrir_menu img {
+        width: 20px;
+        height: 10px;
+    }
 
     .custom-field input {
         height: 40px;
