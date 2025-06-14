@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uniklas</title>
-    <meta name="description" content="Uniklas - Zócalos y accesorios de alta calidad para tus proyectos de construcción y decoración.">
+    <meta name="description"
+        content="Uniklas - Zócalos y accesorios de alta calidad para tus proyectos de construcción y decoración.">
     <link rel="icon" href="resources/iconos/icono.png" type="image/x-icon">
     <link rel="stylesheet" href="estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -216,9 +217,8 @@
                 <h1>CONTACTO</h1>
                 <article class="info">
 
-                    <form class="formulario" action="enviar.php" method="post">
+                    <form class="formulario" id="formularioContacto" action="procesar.php" method="post">
                         <div class="formulario-distribucion">
-
                             <!-- LADO IZQUIERDO -->
                             <div class="parteIzquierda">
                                 <h2>Escríbenos</h2>
@@ -227,26 +227,25 @@
                                     breve formulario de comentarios.</h4>
                                 <fieldset class="formulario-principal">
                                     <label class="custom-field">
-                                        <input type="text" required><span class="placeholder">Nombre
-                                        </span>
+                                        <input type="text" name="nombre" required>
+                                        <span class="placeholder">Nombre</span>
                                     </label>
                                     <label class="custom-field">
-                                        <input type="text" required><span class="placeholder">Correo
-                                        </span>
+                                        <input type="email" name="correo" required>
+                                        <span class="placeholder">Correo</span>
                                     </label>
                                     <label class="custom-field">
-                                        <input type="text" required><span class="placeholder">Asunto
-                                        </span>
+                                        <input type="text" name="asunto" required>
+                                        <span class="placeholder">Asunto</span>
                                     </label>
                                     <label class="custom-field">
-                                        <input type="text" required><span class="placeholder"> Mensaje
-                                        </span>
+                                        <input type="text" name="mensaje" required>
+                                        <span class="placeholder">Mensaje</span>
                                     </label>
                                     <div class="boton">
-                                        <button type="submit">ENVIAR</button>
+                                        <button id="boton_enviar" type="submit">ENVIAR</button>
                                     </div>
                                 </fieldset>
-
                             </div>
                             <!-- LADO DERECHO -->
                             <div class="parteDerecha">
@@ -281,11 +280,8 @@
                                 <h4>+51 934 232 698</h4>
                             </div>
                         </div>
-
                     </form>
                 </article>
-
-
             </section>
         </main>
 
@@ -336,6 +332,15 @@
                 <p>&copy; 2025 Uniklas. Todos los derechos reservados.</p>
             </div>
         </footer>
+    </div>
+    <!-- Modal de confirmación -->
+    <div id="modalConfirmacion" class="modal" style="display: none;">
+        <div class="modal-contenido">
+            <div class="icono-check">✔️</div>
+            <h2>¡Mensaje enviado!</h2>
+            <p>Gracias por contactarnos. Te responderemos pronto.</p>
+            <button onclick="cerrarModal()">Cerrar</button>
+        </div>
     </div>
 
     <script src="codigo.js"></script>

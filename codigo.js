@@ -58,3 +58,48 @@ abrirYcerrar.addEventListener("click", () => {
         acceso = true;
     }
 })
+
+// Validación de formulario
+// Interceptar el envío del formulario de contacto
+
+// Obtiene el formulario por su id
+const form = document.getElementById('formularioContacto');
+
+// Verifica que el formulario exista en el DOM
+if (form) {
+    // Agrega un listener al evento 'submit' del formulario
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Evita el envío tradicional del formulario (no recarga la página)
+
+        // Crea un objeto FormData con los datos del formulario
+        const formData = new FormData(form);
+
+        // Envía los datos a procesar.php usando fetch (AJAX)
+        fetch('procesar.php', {
+            method: 'POST',
+            body: formData
+        })
+            // Cuando recibe la respuesta, la convierte a texto
+            .then(response => response.text())
+            .then(data => {
+                if (data.includes("correctamente")) {
+                    // Muestra la modal centrada si el mensaje fue enviado exitosamente
+                    document.getElementById("modalConfirmacion").style.display = "flex";
+                    form.reset(); // Limpia el formulario
+                } else {
+                    // Muestra mensaje de error en el div con id 'respuesta'
+                    document.getElementById('respuesta').innerHTML =
+                        `<div class="notificacion error">${data}</div>`;
+                }
+            })
+            // Si ocurre un error en la petición, muestra un mensaje de error
+            .catch(error => {
+                document.getElementById('respuesta').innerHTML =
+                    '<div class="notificacion error">Error al enviar el mensaje.</div>';
+            });
+    });
+}
+function cerrarModal() {
+  document.getElementById("modalConfirmacion").style.display = "none";
+}
+

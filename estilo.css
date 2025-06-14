@@ -433,6 +433,43 @@ a {
     height: auto;
 }
 
+/*Para el envio del formulario*/
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 400px;
+}
+
+.icono-check {
+  font-size: 48px;
+  color: #28a745;
+}
+
+.modal-contenido button {
+  background: #e0e0e0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+
 /*---------------------------------------------------------------------*/
 
 /* Acerca de nosotros */
