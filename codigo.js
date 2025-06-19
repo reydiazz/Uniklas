@@ -102,4 +102,19 @@ if (form) {
 function cerrarModal() {
   document.getElementById("modalConfirmacion").style.display = "none";
 }
+// Escucha todos los eventos de teclas presionadas en el documento
+document.addEventListener('keydown', function (event) {
+    
+    // Obtiene la referencia al modal de confirmación
+    const modal = document.getElementById("modalConfirmacion");
+
+    // Verifica si:
+    // 1. La tecla presionada fue "Escape"
+    // 2. El modal está actualmente visible (tiene la clase 'visible')
+    if (event.key === "Escape" && modal.classList.contains("visible")) {
+
+        // Si ambas condiciones se cumplen, cierra el modal
+        cerrarModal();
+    }
+});
 

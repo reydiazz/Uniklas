@@ -403,8 +403,6 @@ a {
     transform: translateY(-5px);
 }
 
-
-
 .parteDerecha h4 {
     text-align: center;
 }
@@ -460,16 +458,23 @@ a {
 }
 
 .modal-contenido button {
-  background: #e0e0e0;
-  padding: 10px 20px;
+  background-color: #a2c238;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 12px;
   margin-top: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
-
+.modal-contenido button:hover {
+  transform: scale(1.05);
+}
 /*---------------------------------------------------------------------*/
 
 /* Acerca de nosotros */
@@ -542,8 +547,20 @@ a {
     margin-right: 12px;
     text-align: center;
 }
-
-
+/*Icono de WhatsApp*/
+.whatsapp-flotante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 50px;   /* Más separación desde abajo */
+    right: 50px;    /* Más separación desde la derecha */
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.whatsapp-flotante:hover {
+    transform: scale(1.1);
+}
 /*---------------------------------------------------------------------*/
 
 /*FOOTER*/
