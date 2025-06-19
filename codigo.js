@@ -118,3 +118,37 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
+//Ventana modal de los productos
+document.addEventListener('DOMContentLoaded', () => {
+
+    const modal      = document.getElementById('producto-modal');
+    const modalImg   = document.getElementById('modal-img');
+    const captionBox = document.getElementById('modal-caption');
+    const btnClose   = document.querySelector('.cerrar');
+
+    // Recorre todas las miniaturas
+    document.querySelectorAll('.marco-imagen').forEach(card => {
+        const thumb = card.querySelector('.pulgar');
+        const boton = card.querySelector('.vista-boton');
+
+        if (thumb && boton) {
+        boton.addEventListener('click', () => {
+            modalImg.src = thumb.src;
+            modalImg.alt = thumb.alt;
+            captionBox.textContent = card.dataset.titulo || thumb.alt || '';
+            modal.classList.add('abierto');
+            document.body.style.overflow = 'hidden';
+        });
+        }
+    });
+
+    // Cerrar modal
+    btnClose.addEventListener('click', cerrarModal);
+    modal.addEventListener('click', e => { if (e.target === modal) cerrarModal(); });
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') cerrarModal(); });
+
+    function cerrarModal(){
+        modal.classList.remove('abierto');
+        document.body.style.overflow = '';
+    }
+});
