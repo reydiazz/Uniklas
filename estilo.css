@@ -306,7 +306,7 @@ a {
     width: 80%;
 }
 
-.modal{
+.modal-p{
     position: fixed;
     inset: 0;
     background: rgb(0, 0, 0, 0.8);
@@ -319,7 +319,7 @@ a {
     z-index: 9999;
 }
 
-.modal.abierto{
+.modal-p.abierto{
     opacity:1;
     pointer-events: auto;
 }
