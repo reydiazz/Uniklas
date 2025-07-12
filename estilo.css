@@ -656,10 +656,8 @@ a {
 /*Icono de WhatsApp*/
 .whatsapp-flotante {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 50px;   /* Más separación desde abajo */
-    right: 50px;    /* Más separación desde la derecha */
+    bottom: 80px;   /* Más separación desde abajo */
+    right: 10px;    /* Más separación desde la derecha */
     z-index: 1000;
     cursor: pointer;
     transition: transform 0.2s;
