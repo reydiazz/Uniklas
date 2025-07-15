@@ -43,7 +43,6 @@ function resetearIntervalo() {
 }
 
 
-
 let acceso = true;
 
 const nav = document.querySelector("#navegacion")
@@ -60,20 +59,12 @@ abrirYcerrar.addEventListener("click", () => {
 })
 
 // Validación de formulario
-// Interceptar el envío del formulario de contacto
-
-// Obtiene el formulario por su id
 const form = document.getElementById('formularioContacto');
-
-// Verifica que el formulario exista en el DOM
 if (form) {
-    // Agrega un listener al evento 'submit' del formulario
     form.addEventListener('submit', function (e) {
         e.preventDefault(); // Evita el envío tradicional del formulario (no recarga la página)
-
         // Crea un objeto FormData con los datos del formulario
         const formData = new FormData(form);
-
         // Envía los datos a procesar.php usando fetch (AJAX)
         fetch('procesar.php', {
             method: 'POST',
@@ -83,11 +74,12 @@ if (form) {
             .then(response => response.text())
             .then(data => {
                 if (data.includes("correctamente")) {
-                    // Muestra la modal centrada si el mensaje fue enviado exitosamente
                     document.getElementById("modalConfirmacion").style.display = "flex";
-                    form.reset(); // Limpia el formulario
+                    form.reset();
+                } else if (data.includes("límite") || data.includes("Has alcanzado el límite")) {
+                    // Muestra el modal de límite de envíos
+                    document.getElementById("modalLimiteEnvios").style.display = "flex";
                 } else {
-                    // Muestra mensaje de error en el div con id 'respuesta'
                     document.getElementById('respuesta').innerHTML =
                         `<div class="notificacion error">${data}</div>`;
                 }
@@ -102,16 +94,12 @@ if (form) {
 function cerrarModal() {
   document.getElementById("modalConfirmacion").style.display = "none";
 }
-
-
 //Ventana modal de los productos
 document.addEventListener('DOMContentLoaded', () => {
-
     const modal      = document.getElementById('producto-modal');
     const modalImg   = document.getElementById('modal-img');
     const captionBox = document.getElementById('modal-caption');
     const btnClose   = document.querySelector('.cerrar');
-
     // Recorre todas las miniaturas
     document.querySelectorAll('.marco-imagen').forEach(card => {
         const thumb = card.querySelector('.pulgar');
@@ -127,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         }
     });
-
     // Cerrar modal
     btnClose.addEventListener('click', cerrarModalProductos);
     modal.addEventListener('click', e => { if (e.target === modal) cerrarModalProductos(); });
@@ -138,3 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 });
+function cerrarModalLimite() {
+    document.getElementById("modalLimiteEnvios").style.display = "none";
+}

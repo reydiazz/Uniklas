@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Uniklas</title>
     <meta name="description"
         content="Uniklas - Zócalos y accesorios de alta calidad para tus proyectos de construcción y decoración.">
@@ -14,12 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
-
     <div class="contenedor-principal" id="ubicacionInicio">
-
-        <!-- BARRA DE NAVEGACION -->
         <header class="contenedor-barra-navegacion">
             <div class="encabezado-principal">
                 <a>
@@ -35,8 +31,6 @@
                 <a href="#ubicacionNosotros">Nosotros</a>
             </nav>
         </header>
-
-        <!-- CARRUSEL DE IMAGENES -->
         <section class="carrusel-imagenes">
             <figure class="carrusel-slide active">
                 <img src="resources/carrusel/img-carrusel-1.jpg" alt="Slide 1">
@@ -55,10 +49,7 @@
                 <span class="dot"></span>
             </div>
         </section>
-        <!-- CUERPO DE LA PAGINA -->
         <main class="contenedor-cuerpo">
-
-            <!-- PRODUCTOS -->
             <section class="contenedor-principal-productos" id="ubicacionProductos">
                 <h1>NUESTROS PRODUCTOS</h1>
                 <div class="contenedor-secundario-productos">
@@ -266,7 +257,6 @@
                     </article>
                 </div>
             </section>
-            <!--  PRODUCTOS: VENTANA MODAL  -->
             <div class="modal-p" id="producto-modal">
                 <div class="modal-contenido-producto">
                     <button class="cerrar" aria-label="Cerrar">&times;</button>
@@ -274,16 +264,11 @@
                     <div id="modal-caption"></div>
                 </div>
             </div>
-
-
-            <!-- CONTACTO -->
             <section class="contenedor-principal-contacto" id="contacto">
                 <h1>CONTACTO</h1>
                 <article class="info">
-
                     <form class="formulario" id="formularioContacto" action="procesar.php" method="post">
                         <div class="formulario-distribucion">
-                            <!-- LADO IZQUIERDO -->
                             <div class="parteIzquierda">
                                 <h2>Escríbenos</h2>
                                 <h4>Si tiene alguna pregunta sobre nosotros, contáctenos directamente y complete
@@ -311,7 +296,6 @@
                                     </div>
                                 </fieldset>
                             </div>
-                            <!-- LADO DERECHO -->
                             <div class="parteDerecha">
 
                                 <h2>Centro de atención</h2>
@@ -325,8 +309,6 @@
 
                             </div>
                         </div>
-
-                        <!-- DEBAJO -->
                         <div class="info-com">
                             <div class="contenedor-img">
                                 <h2>Telefono</h2>
@@ -348,8 +330,6 @@
                 </article>
             </section>
         </main>
-
-        <!-- ACERCA DE NOSOTROS -->
         <div id="ubicacionNosotros">
             <h1>ACERCA DE NOSOTROS</h1>
             <div class="acerca-de-contenido">
@@ -375,7 +355,6 @@
                         <img src="resources/iconos/vision.uniklas.jpg" alt="vision">
                     </div>
                 </article>
-
                 <div class="redes-sociales">
                     <a href="https://www.facebook.com/zocalosUniklas" target="_blank"><img
                             src="resources/iconos/facebook.png" alt="Zócalos y accesorios Uniklas"
@@ -388,16 +367,13 @@
                 </div>
             </div>
         </div>
-
-        <!-- FOOTER  -->
         <footer class="footer_contenido">
             <div class="footer_info">
                 <p>&copy; 2025 Uniklas. Todos los derechos reservados.</p>
             </div>
         </footer>
     </div>
-    <!-- Modal de confirmación -->
-    <div id="modalConfirmacion" class="modal" style="display: none;">
+    <div id="modalConfirmacion" class="modal" style="display:none;">
         <div class="modal-contenido">
             <div class="icono-check"><img src="resources/iconos/check.webp" alt="check" width="80px"></div>
             <h2>¡Mensaje enviado!</h2>
@@ -405,7 +381,14 @@
             <button onclick="cerrarModal()">Cerrar</button>
         </div>
     </div>
-    <!-- Icono flotante de WhatsApp -->
+    <div id="modalLimiteEnvios" class="modal" style="display:none;">
+        <div class="modal-contenido">
+            <div class="icono-check"><img src="resources/iconos/alerta.png" alt="alerta" width="80px"></div>
+            <h2>¡Límite alcanzado!</h2>
+            <p>Solo puedes enviar 3 mensajes por hora. Por favor, espera antes de volver a intentarlo.</p>
+            <button onclick="cerrarModalLimite()">Cerrar</button>
+        </div>
+    </div>
     <a href="https://wa.me/51934232698" class="whatsapp-flotante" target="_blank" title="¡Escríbenos por WhatsApp!">
         <img src="resources/iconos/whatsapp.png" alt="WhatsApp" width="70" height="70">
     </a>

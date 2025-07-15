@@ -581,6 +581,55 @@ a {
 .modal-contenido button:hover {
   transform: scale(1.05);
 }
+
+/* Modal de límite de envíos */
+#modalLimiteEnvios.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+#modalLimiteEnvios .modal-contenido {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 400px;
+}
+
+#modalLimiteEnvios .icono-check {
+  font-size: 48px;
+  color: #e67e22;
+  margin-bottom: 15px;
+}
+
+#modalLimiteEnvios button {
+  background-color: #a2c238;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+#modalLimiteEnvios button:hover {
+  transform: scale(1.05);
+}
 /*---------------------------------------------------------------------*/
 
 /* Acerca de nosotros */
